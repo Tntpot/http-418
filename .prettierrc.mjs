@@ -1,14 +1,15 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
 export default {
-  htmlWhitespaceSensitivity: "ignore",
+  singleQuote: true,
+  htmlWhitespaceSensitivity: 'ignore',
   bracketSameLine: true,
-  plugins: ["prettier-plugin-astro"],
+  plugins: ['prettier-plugin-astro'],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],
