@@ -5,6 +5,8 @@ pubDate: 'Jun 19 2024'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
+<mark>This is the auto-generated Astro file — which I'm leaving here for my own reference (or yours!)</mark>
+
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
 ## Headings
