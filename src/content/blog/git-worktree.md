@@ -7,4 +7,4 @@ tags: ['git', 'development']
 ---
 Worktrees are one of my favourite `git` features, and something I think is widely underused.
 
-An absolute dream for multitaskers (or those like myself who try & fail to do so) — worktrees can be used to quickly & easily have multiple branches or versions of code on your machine at one time, side-by-side. 
+An absolute dream for multitaskers (or, like myself, those who try & fail to do so) — worktrees can be used to quickly & easily have multiple branches or versions of code on your machine at one time, side-by-side. 
