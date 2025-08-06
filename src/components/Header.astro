@@ -6,7 +6,9 @@ import Logo from '../assets/tnt_pot.jpg';
 
 <header>
    <nav>
-      <Image src={Logo} alt="Tnt_pot logo" width="50" />
+      <a id="img-anchor" class="none" href="/">
+         <Image src={Logo} alt="Tnt_pot logo" width="50" />
+      </a>
       <div class="internal-links">
          <HeaderLink href="/">Home</HeaderLink>
          <HeaderLink href="/blog">Blog</HeaderLink>
@@ -73,5 +75,8 @@ import Logo from '../assets/tnt_pot.jpg';
       .social-links {
          display: none;
       }
+   }
+   nav a.none {
+      padding: 0 0;
    }
 </style>
