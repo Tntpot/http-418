@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Carosel from '../components/Carosel.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -34,11 +35,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             things I want to learn more in depth, or some areas where I just want to play around &
             try things out.
          </p>
-         <br />
          <p>
             Built using <a href="https://astro.build/" target="_blank">Astro 🚀</a> - highly recommend
             checking it out.
          </p>
+         <div>
+            <Carosel />
+         </div>
       </main>
       <Footer />
    </body>
