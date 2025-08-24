@@ -6,9 +6,9 @@ import placeholderImg from '../assets/blog-placeholder-2.jpg';
 const posts = (await getCollection('blog')).sort(
    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-for (var i = 0; i <= 50; i++) {
-    posts.push({id: `test${i}`, data: { title: `titletest${i}`, heroImage: placeholderImg }});
-}
+// for (var i = 0; i <= 50; i++) {
+//     posts.push({id: `test${i}`, data: { title: `titletest${i}`, heroImage: placeholderImg }});
+// }
 ---
 
 <div class="carosel">
@@ -16,8 +16,8 @@ for (var i = 0; i <= 50; i++) {
     return <div>
         <a href=`/blog/${post.id}`>
             {post.data.heroImage && (
-            // <Image width={720} height={360} src={post.data.heroImage} alt="" />
-            <Image width={720} height={360} src={placeholderImg} alt="" />
+            <Image width={720} height={360} src={post.data.heroImage} alt="" />
+            // <Image width={720} height={360} src={placeholderImg} alt="" />
             )}
             <span>{post.data.title}</span>
         </a>
