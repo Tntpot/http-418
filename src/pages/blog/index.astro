@@ -18,6 +18,11 @@ const posts = (await getCollection('blog')).sort(
    <head>
       <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
       <style>
+         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+         }
          main {
             display: flex;
             flex-grow: 1;
