@@ -30,7 +30,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             Built using <a href="https://astro.build/" target="_blank">Astro 🚀</a> - highly recommend
             checking it out.
          </p>
-         <div class="wrapper">
+         <div>
             <Carosel />
          </div>
       </main>
@@ -39,17 +39,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 </html>
 
 <style>
+   body {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+   }
+
    main {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
       min-height: 80vh;
       min-height: 80dvh;
-   }
-
-   div.wrapper {
-       display: flex;
-       flex-flow: column nowrap;
-       flex-grow: 1;
    }
 </style>
