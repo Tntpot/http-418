@@ -19,7 +19,7 @@ const posts = (await getCollection('blog')).sort(
             <Image width={720} height={360} src={post.data.heroImage} alt="" />
             // <Image width={720} height={360} src={placeholderImg} alt="" />
             )}
-            <span>{post.data.title}</span>
+            <h4>{post.data.title}</h4>
         </a>
     </div>
     })}
@@ -29,7 +29,6 @@ const posts = (await getCollection('blog')).sort(
     .carosel {
         display: grid;
         justify-content: center;
-        gap: 1rem;
         max-height: 45svh;
         min-height: 400px;
         grid-auto-flow: row;
@@ -45,12 +44,33 @@ const posts = (await getCollection('blog')).sort(
         vertical-align: middle;
         display: flex;
         flex-direction: column;
+        padding: 1.5rem;
+        padding-top: 0;
     }
 
-    .carosel span {
+    .carosel h4 {
         display: flex;
         flex: 1;
         justify-self: center;
         padding: 0.5rem 0rem;
+        margin: 0;
+        color: rgb(var(--black));
+    }
+
+    .carosel div * {
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+
+    .carosel a:hover h4 {
+        color: var(--accent);
+    }
+
+    .carosel a:hover img {
+        box-shadow: var(--box-shadow);
+    }
+
+    .carosel a:hover {
+        color: rgb(var(--accent));
     }
 </style>
