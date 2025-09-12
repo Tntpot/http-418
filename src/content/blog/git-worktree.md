@@ -2,7 +2,7 @@
 title: "Git Worktree"
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Aug 03 2025'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/git_worktree.jpeg'
 tags: ['git', 'development']
 ---
 Worktrees are one of my favourite `git` features, and something I think is widely underused.
