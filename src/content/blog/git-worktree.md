@@ -11,7 +11,7 @@ An absolute dream for multitaskers (or those like myself, who try & fail to do s
 
 Find yourself working on a feature, but a colleague needs help with an issue on their branch? No longer do you need to stash your changes, checkout their branch, stop, re-build, and re-run the project etc. 
 
-You can simply navigate to the directory containing your `.git` directory and run:
+Simply navigate to the root of your project (containing your `.git` directory) and run:
 ```bash
 git worktree add ../worktree-1 colleague-branch-name
 ```
@@ -33,10 +33,12 @@ Entering the `worktree-1` directory and running a `git status` will confirm that
 
 You are now free to make changes, test fixes, create and `push` commits to this remote branch all without interfering with your existing work.
 
-After you've pushed the fix for your colleague's problem (like a helpful coworker), you can remove the worktree.
+Once you've pushed the fix for your colleague's problem (like a helpful coworker), you can remove the worktree.
 
-This must be done by returning to our `original-project` directory containing our `.git` directory, and running:
+This must be done by returning to our `original-project` directory containing our root `.git` directory, and running:
 ```bash
 git worktree remove ../worktree-1
 ```
 The `remove` command can be executed with one parameter, the `path` to our worktree that we want to remove.
+
+That's it! That simple — but very effective in the right circumstances.
