@@ -1,49 +1,44 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPreview.astro';
 ---
 
-<Layout
-   title="About Me"
-   description="Lorem ipsum dolor sit amet"
-   pubDate={new Date('August 30 2025')}
-   heroImage={AboutHeroImage}
-   tags={['about']}>
-   <p>
-      I'm a Software Developer with 5+ years of 'full stack' experience. I have a real passion for
-      frontend development, but I also strongly enjoy API development & design, and DevOps work. I
-      like to know & understand the full life cycle of products I'm working on front-to-back, the
-      build/release process, and the environment where it's running.
-   </p>
+<style>
+   h1 {
+      text-align: center;
+   }
+   hr {
+      padding-bottom: 1rem;
+   }
+</style>
+<Layout title="About Me">
+   <main class="prose">
+      <h1>About Me</h1>
+      <hr />
+      <p>
+         I'm a Software Developer with 5+ years of 'full stack' experience. I have a real passion
+         for frontend development, but I also strongly enjoy API development & design, and DevOps
+         work. I like to know & understand the full life cycle of products I'm working on
+         front-to-back, the build/release process, and the environment where it's running.
+      </p>
 
-   <p>
-      My frontend development experience started with the 'OGs' such as JQuery, KnockOutJS, ASP.NET
-      MVC (on .Net Framework, still going strong!), and AngularJS (note the 'JS' - this was
-      pre-TypeScript).
-      <br />
-      Throughout my career, I have also spent a lot of time developing in Angular (v2+) using TypeScript,
-      so I have a strong understanding of modern frontend frameworks, but a deep appreciation for the
-      underlying functionality ('vanilla JS' some would say).
-   </p>
+      <p>
+         My frontend development experience started with the 'OGs' such as JQuery, KnockOutJS,
+         ASP.NET MVC (on .Net Framework, still going strong!), and AngularJS (note the 'JS' - this
+         was pre-TypeScript).
+         <br />
+         Throughout my career, I have also spent a lot of time developing in Angular (v2+) using TypeScript,
+         so I have a strong understanding of modern frontend frameworks, but a deep appreciation for
+         the underlying functionality ('vanilla JS' some would say).
+      </p>
 
-   <p>
-      My professional work has largely kept me in the Microsoft-sphere of things — my primary
-      backend language is C#, but I have worked with Java, Python, and some Terraform when needed.
-      <br />
-      I'm Azure certified (AZ-900 & AZ-204) and currently studying for my AZ-305 (Azure Solutions Architect
-      Expert).
-   </p>
+      <p>
+         My professional work has largely kept me in the Microsoft-sphere of things — my primary
+         backend language is C#, but I have worked with Java, Python, and even some Terraform when
+         needed.
+      </p>
 
-   <p>
-      Outside of work I'm currently enjoying and deepening my knowledge with Linux, using the
-      fantastic
-      <a href="https://omarchy.org/" target="_blank">Omarchy</a> set up put together by <a
-         href="https://x.com/dhh"
-         target="_blank">
-         DHH
-      </a>. This has been a delight to learn & use, and is incredibly fast (highly recommend
-      checking it out).
-   </p>
+      <p>I'm Azure Fundamentals (AZ-900) and Azure Developer Associate (AZ-204) certified.</p>
 
-   <p>Oh, and I use Neovim, btw.</p>
+      <p>Oh, and I use Neovim, btw.</p>
+   </main>
 </Layout>
