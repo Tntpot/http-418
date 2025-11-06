@@ -70,9 +70,9 @@ const { title, description, pubDate, updatedDate, tags } = Astro.props;
                      Tags: {
                         tags.map((tag, idx) => {
                            return (
-                              <i>
-                                 {tag}{idx === tags.length - 1 ? '' : ', '}
-                              </i>
+                              <a href={`/blog/tag/${tag}`}>
+                                 <i>{tag + (idx === tags.length - 1 ? '' : ', ')}</i>
+                              </a>
                            );
                         })
                      }
