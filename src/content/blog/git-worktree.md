@@ -1,7 +1,7 @@
 ---
 title: "Git Worktree"
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Aug 03 2025'
+pubDate: 'Nov 06 2025'
 heroImage: '../../assets/git_worktree.jpeg'
 tags: ['git', 'development']
 ---
