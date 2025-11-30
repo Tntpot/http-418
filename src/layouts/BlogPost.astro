@@ -46,6 +46,9 @@ const { title, description, pubDate, updatedDate, tags } = Astro.props;
             background-color: mark;
             color: marktext;
          }
+         :global(.prose p) {
+            margin-bottom: revert;
+         }
          :global(p:has(+ pre.astro-code)) {
             margin-bottom: revert;
          }
