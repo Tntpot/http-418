@@ -1,7 +1,7 @@
 ---
 title: "Git Worktree"
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Nov 06 2025'
+pubDate: 'Nov 30 2025'
 heroImage: '../../assets/git_worktree.jpeg'
 tags: ['git', 'development']
 ---
@@ -25,17 +25,18 @@ The second is the `branch` name you wish to checkout - this will be the checked-
 After running this command, navigate up a directory and you will see something like:
 ```bash
     original-project
-        |--> .git
+        |--> .git (Main)
     worktree-1 
+        |--> .git (colleague-branch-name)
 ```
 
-Entering the `worktree-1` directory and running a `git status` will confirm that we are now on the branch `worktree-1`.
+Entering the `worktree-1` directory and running a `git status` will confirm that we are now on the branch `colleague-branch-name`.
 
 You are now free to make changes, test fixes, create and `push` commits to this remote branch all without interfering with your existing work.
 
 Once you've pushed the fix for your colleague's problem (like a helpful coworker), you can remove the worktree.
 
-This must be done by returning to our `original-project` directory containing our root `.git` directory, and running:
+This is done by returning to our `original-project` directory containing our root `.git` directory, and running:
 ```bash
 git worktree remove ../worktree-1
 ```
