@@ -16,11 +16,11 @@ Simply navigate to the root of your project (containing your `.git` directory) a
 git worktree add ../worktree-1 colleague-branch-name
 ```
 
-The `add` command in this scenario takes two parameters.
+The `add` command in this scenario takes two parameters:
 
-The first is the `path` where you wish to create the new `worktree` — note I've gone up one directory, so as to not pollute my current branch.
+The first is the `path` where you wish to create the new `worktree` — note I've gone up one directory, so as to not pollute my current branch. This will create a new directory named `worktree-1`.
 
-The second is the `branch` name you wish to checkout - this will be the checked-out branch for the worktree.
+The second is the `branch` name you wish to checkout - this will be the checked-out branch for the worktree, in this case `colleague-branch-name`.
 
 After running this command, navigate up a directory and you will see something like:
 ```bash
