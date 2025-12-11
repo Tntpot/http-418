@@ -1,6 +1,6 @@
 ---
 title: "Git Worktree"
-description: 'Lorem ipsum dolor sit amet'
+description: 'Boost context switching ability'
 pubDate: 'Nov 30 2025'
 heroImage: '../../assets/git_worktree.jpeg'
 tags: ['git', 'development']
