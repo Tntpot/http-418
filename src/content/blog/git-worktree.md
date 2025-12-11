@@ -32,7 +32,7 @@ After running this command, navigate up a directory and you will see something l
 
 Entering the `worktree-1` directory and running a `git status` will confirm that we are now on the branch `colleague-branch-name`.
 
-You are now free to make changes, test fixes, create and `push` commits to this remote branch all without interfering with your existing work.
+You are now free to make changes, test fixes, and create/`push` commits to this remote branch; all without interfering with your existing work.
 
 Once you've pushed the fix for your colleague's problem (like a helpful coworker), you can remove the worktree.
 
@@ -40,6 +40,6 @@ This is done by returning to our `original-project` directory containing our roo
 ```bash
 git worktree remove ../worktree-1
 ```
-The `remove` command can be executed with one parameter, the `path` to our worktree that we want to remove.
+The `remove` command can be executed with one parameter — the `path` to our worktree that we want to remove.
 
 That's it! That simple — but very effective in the right circumstances.
