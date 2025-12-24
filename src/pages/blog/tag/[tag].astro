@@ -12,7 +12,9 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const posts = (await getCollection('blog')).filter((post) => post.data.tags.includes(tag));
+const posts = (await getCollection('blog'))
+   .filter((post) => post.data.tags.includes(tag))
+   .sort((first, second) => second.data.pubDate.getTime() - first.data.pubDate.getTime());
 ---
 
 <style>
