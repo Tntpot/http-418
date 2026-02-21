@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import placeholderImg from '../assets/blog-placeholder-2.jpg';
 
 const posts = (await getCollection('blog')).sort(
    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -17,7 +16,6 @@ const posts = (await getCollection('blog')).sort(
         <a href=`/http-418/blog/${post.id}`>
             {post.data.heroImage && (
             <Image width={720} height={360} src={post.data.heroImage} alt="" />
-            // <Image width={720} height={360} src={placeholderImg} alt="" />
             )}
             <h4>{post.data.title}</h4>
         </a>
@@ -31,6 +29,7 @@ const posts = (await getCollection('blog')).sort(
         justify-content: center;
         max-height: 45svh;
         min-height: 400px;
+        padding-top: 0.75rem;
         grid-auto-flow: row;
         grid-auto-rows: 1fr 1fr;
         overflow-y: auto;
@@ -49,9 +48,6 @@ const posts = (await getCollection('blog')).sort(
     }
 
     .carosel h4 {
-        display: flex;
-        flex: 1;
-        justify-self: center;
         padding: 0.5rem 0rem;
         margin: 0;
         color: rgb(var(--black));
