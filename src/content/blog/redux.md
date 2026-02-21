@@ -1,7 +1,7 @@
 ---
 title: 'Introduction to Redux'
 description: 'The state of the world...'
-pubDate: 'Dec 18 2025'
+pubDate: 'Feb 21 2026'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 tags: ['redux', 'development']
 ---
@@ -12,9 +12,12 @@ The Redux API has very few functions and is relatively simplistic (base Redux th
 import { compose} from "redux";
 ```
 
-The `compose` function takes any number of provided single-argument' functions as parameters, and returns a singular function which effectively combines all of these.
+The `compose` helper function takes any number of provided single-argument functions as parameters, and returns a singular function which effectively combines all of these.
 
 This is done with right-to-left associativity, and will execute these in the reverse sequence they are provided to the `compose` function (from right-to-left...).
+
+From the [Redux docs](https://redux.js.org/api/compose#arguments): `Its return value will be provided as an argument to the function standing to the left, and so on.`
+
 
 ## Store
 ```javascript
@@ -26,6 +29,8 @@ const store = createStore(reducer);
 A `store` is exactly what you would think — a `redux store` of the state of the application.
 
 As such, the `store` has functions such as `store.getState()` which will return the 'state of the world' as it is at that point in time.
+
+**⚠️ It is worth mentioning that the `createStore` method has been deprecated in favour of the `configureStore` method from the official [Redux Toolkit](https://redux-toolkit.js.org).**
 
 When creating a store, there is only one required parameter — a `reducer`.
 
