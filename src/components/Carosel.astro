@@ -73,4 +73,9 @@ const posts = (await getCollection('blog')).sort(
     .carosel a:hover {
         color: rgb(var(--accent));
     }
+
+    .carosel img[src$="svg"] {
+        padding: 20px;
+        box-sizing: border-box;
+    }
 </style>

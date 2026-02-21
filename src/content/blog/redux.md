@@ -2,7 +2,7 @@
 title: 'Introduction to Redux'
 description: 'The state of the world...'
 pubDate: 'Feb 21 2026'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/redux.svg'
 tags: ['redux', 'development']
 ---
 The Redux API has very few functions and is relatively simplistic (base Redux that is).
