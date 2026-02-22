@@ -1,77 +1,75 @@
 ---
-import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+
+import BlogCard from './BlogCard.astro';
 
 const posts = (await getCollection('blog')).sort(
    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+) as CollectionEntry<'blog'>[];
+
 // for (var i = 0; i <= 50; i++) {
 //     posts.push({id: `test${i}`, data: { title: `titletest${i}`, heroImage: placeholderImg }});
 // }
 ---
 
 <div class="carosel">
-    {posts.map((post) => {
-    return <div>
-        <a href=`/http-418/blog/${post.id}`>
-            {post.data.heroImage && (
-            <Image width={720} height={360} src={post.data.heroImage} alt="" />
-            )}
-            <h4>{post.data.title}</h4>
-        </a>
-    </div>
-    })}
+   {
+      posts.map((post) => {
+         return <BlogCard post={post as CollectionEntry<'blog'>} />;
+      })
+   }
 </div>
 
 <style>
-    .carosel {
-        display: grid;
-        justify-content: center;
-        max-height: 45svh;
-        min-height: 400px;
-        padding-top: 0.75rem;
-        grid-auto-flow: row;
-        grid-auto-rows: 1fr 1fr;
-        overflow-y: auto;
-        scroll-snap-type: y mandatory;
-        scroll-padding: 1rem;
-    }
+   .carosel {
+      display: grid;
+      justify-content: center;
+      max-height: 45svh;
+      min-height: 400px;
+      padding-top: 0.75rem;
+      grid-auto-flow: row;
+      grid-auto-rows: 1fr 1fr;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-padding: 1rem;
+   }
 
-    .carosel > * {
-        scroll-snap-align: start;
-        text-align: center;
-        vertical-align: middle;
-        display: flex;
-        flex-direction: column;
-        padding: 1.5rem;
-        padding-top: 0;
-    }
+   .carosel > :global(*) {
+      scroll-snap-align: start;
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      padding-top: 0;
+   }
 
-    .carosel h4 {
-        padding: 0.5rem 0rem;
-        margin: 0;
-        color: rgb(var(--black));
-    }
+   .carosel :global(h4) {
+      padding: 0.5rem 0rem;
+      margin: 0;
+      color: rgb(var(--black));
+   }
 
-    .carosel div * {
-        text-decoration: none;
-        transition: 0.2s ease;
-    }
+   .carosel :global(div *) {
+      text-decoration: none;
+      transition: 0.2s ease;
+   }
 
-    .carosel a:hover h4 {
-        color: var(--accent);
-    }
+   .carosel :global(a:hover h4) {
+      color: var(--accent);
+   }
 
-    .carosel a:hover img {
-        box-shadow: var(--box-shadow);
-    }
+   .carosel :global(a:hover img) {
+      box-shadow: var(--box-shadow);
+   }
 
-    .carosel a:hover {
-        color: rgb(var(--accent));
-    }
+   .carosel :global(a:hover) {
+      color: rgb(var(--accent));
+   }
 
-    .carosel img[src$="svg"] {
-        padding: 20px;
-        box-sizing: border-box;
-    }
+   .carosel :global(img[src$='svg']) {
+      padding: 20px;
+      box-sizing: border-box;
+   }
 </style>

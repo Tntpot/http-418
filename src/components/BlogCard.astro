@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+   post: CollectionEntry<'blog'>;
+   showDate?: boolean;
+}
+
+const { post, showDate = false } = Astro.props;
+---
+
+<style>
+   img[src$='svg'] {
+      padding: 20px;
+      box-sizing: border-box;
+   }
+</style>
+
+<div>
+   <a href=`/http-418/blog/${post.id}`>
+      {post.data.heroImage && <Image width={720} height={360} src={post.data.heroImage} alt="" />}
+      <h4 class="title">{post.data.title}</h4>
+      {
+         showDate && (
+            <p class="date">
+               <FormattedDate date={post.data.pubDate} />
+            </p>
+         )
+      }
+   </a>
+</div>
