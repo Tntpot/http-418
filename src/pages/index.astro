@@ -11,9 +11,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
    <head>
       <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
    </head>
-   <body>
+   <body class="flex flex-col min-h-lvh">
       <Header />
-      <main>
+      <main class="flex flex-col flex-grow max-h-full min-h-[80dvh]">
          <div class="flex flex-row gap-1 p-0 m-0">
             <h1>Hello!</h1>
          </div>
@@ -30,33 +30,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             Built using <a href="https://astro.build/" target="_blank">Astro 🚀</a> - highly recommend
             checking it out.
          </p>
-         <div class="wrapper">
+         <div class="flex flex-grow max-h-full">
             <Carosel />
          </div>
       </main>
       <Footer />
    </body>
 </html>
-
-<style>
-   body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-   }
-
-   main {
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      max-height: 100%;
-      min-height: 80vh;
-      min-height: 80dvh;
-   }
-
-   div.wrapper {
-      display: flex;
-      flex: 1 auto;
-      max-height: 100%;
-   }
-</style>
