@@ -13,6 +13,11 @@ Find yourself working on a feature, but a colleague needs help with an issue on 
 
 Simply navigate to the root of your project (containing your `.git` directory) and run:
 ```bash
+git worktree add <-path-> <-branch->
+```
+
+So for this example:
+```bash
 git worktree add ../worktree-1 colleague-branch-name
 ```
 
@@ -34,12 +39,30 @@ Entering the `worktree-1` directory and running a `git status` will confirm that
 
 You are now free to make changes, test fixes, and create/`push` commits to this remote branch; all without interfering with your existing work.
 
+**It's good advice not to clutter your source directory with worktrees. Personally, I keep all my worktrees in their own directory e.g. `~/wt`.**
+
 Once you've pushed the fix for your colleague's problem (like a helpful coworker), you can remove the worktree.
 
 This is done by returning to our `original-project` directory containing our root `.git` directory, and running:
+```bash
+git worktree remove <-path->
+```
+
+So for this example:
 ```bash
 git worktree remove ../worktree-1
 ```
 The `remove` command can be executed with one parameter — the `path` to our worktree that we want to remove.
 
-That's it! That simple — but very effective in the right circumstances.
+If you need to create a new branch, to work on a bug fix for example, you can pass the familiar `-b` flag to create this at the same time:
+```bash
+git worktree add <-path-> -b <-branch->
+```
+
+E.g.
+```bash
+git worktree add ~/wt/bugfix_XXXXX -b bugfix_XXXXXX
+```
+
+
+That's it! That simple—but very effective in the right circumstances.
