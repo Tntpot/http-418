@@ -2,6 +2,7 @@
 title: "Git Worktree"
 description: 'Boost context switching ability'
 pubDate: 'Nov 30 2025'
+updatedDate: 'Aug 3 2026'
 heroImage: '../../assets/git_worktree.jpeg'
 tags: ['git', 'development']
 ---
